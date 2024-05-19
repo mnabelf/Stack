@@ -1,0 +1,36 @@
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+//Function untuk print elemen stack
+void prints(stack<int> stack1){
+	stack<int> s = stack1;
+
+	while(!s.empty()) {
+		cout << '\t' << s.top();
+		s.pop();
+	}
+	cout << '\n';
+}
+
+int main(){
+	stack<int> tumpukan1;
+	stack<int> s = tumpukan1;
+
+	s.push(98);
+	s.push(99);
+	s.push(100);
+
+	cout << "\nElemen pada stack 'tumpukan1' : ";
+	prints(s);
+
+	cout << "\nJumlah elemen stack 'tumpukan1' : " << s.size();
+	cout << "\nElemen terdepan stack 'tumpukan1' : " << s.top();
+
+	cout << "\nElemen pada stack 'tumpukan1' setelah penghapusan : ";
+	s.pop();
+	prints(s);
+
+	return 0;
+}
